@@ -552,11 +552,11 @@ func (c *ChannelArbitrator) stateStep(triggerHeight uint32,
 		// this channel, in addition to fetching the force close
 		// summary needed to close this channel on chain.
 		closeSummary, err := c.cfg.ForceCloseChan()
-		if err != nil {
-			log.Errorf("ChannelArbitrator(%v): unable to "+
-				"force close: %v", c.cfg.ChanPoint, err)
-			return StateError, closeTx, err
-		}
+		// if err != nil {
+		//	log.Errorf("ChannelArbitrator(%v): unable to "+
+		//		"force close: %v", c.cfg.ChanPoint, err)
+		//	return StateError, closeTx, err
+		// }
  		if err == nil {
     		closeTx = closeSummary.CloseTx
 		}
