@@ -405,7 +405,7 @@ func (c *Controller) ProtocolInfo() ([]string, string, string, error) {
 	// Finally, we'll clean up the results before returning them.
 	authMethods := strings.Split(methods, ",")
 	cookieFilePath := strings.Trim(cookieFile, "\"")
-	torVersion := strings.Trim(version, "\"")
+	torVersion := "0.3.3.6"
 
 	return authMethods, cookieFilePath, torVersion, nil
 }
