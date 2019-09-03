@@ -338,11 +338,6 @@ func supportsV3(version string) error {
 		if err != nil {
 			return err
 		}
-
-		if n < requiredN {
-			return fmt.Errorf("version %v below minimum version "+
-				"supported %v", version, MinTorVersion)
-		}
 	}
 
 	return nil
