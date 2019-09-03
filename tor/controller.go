@@ -357,7 +357,7 @@ func supportsV3(version string) error {
 			return err
 		}
 
-		if n < requiredN {
+		if n > requiredN {
 			return fmt.Errorf("version %v wtf below minimum version "+
 				"supported %v", version, MinTorVersion)
 		}
